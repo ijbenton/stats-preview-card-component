@@ -1,0 +1,84 @@
+@import './_variables.scss';
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  font-family: 'Inter';
+}
+body {
+  height: 100%;
+  background-color: $background;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: $primary;
+  color: $white;
+  width: 70%;
+  height: 450px;
+  display: flex;
+  flex-direction: row-reverse;
+
+  &__info {
+    display: flex;
+    flex: 0 1 50%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3.5rem;
+  }
+
+  &__img {
+    background: url('/../../images/image-header-desktop.jpg') no-repeat center
+      center;
+    height: 100%;
+    flex: 0 1 50%;
+
+    &--overlay {
+      height: 100%;
+      background: $secondary-transparent;
+      overflow: hidden;
+      z-index: 2;
+    }
+  }
+
+  &__title {
+    margin: 0 0 1rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  &__description {
+    color: $offwhite-primary;
+    line-height: 1.5rem;
+    margin-bottom: 4rem;
+  }
+  &__stats {
+    font-family: 'Lexend Deca';
+    display: flex;
+    &--item {
+      display: flex;
+      flex-direction: column;
+      margin-right: 3rem;
+
+      span {
+        &:first-child {
+          font-size: 1.5rem;
+          margin-bottom: 0.25rem;
+        }
+        &:nth-child(2) {
+          text-transform: uppercase;
+          color: $offwhite-secondary;
+        }
+      }
+    }
+  }
+}
+
+.highlight {
+  color: $secondary;
+}
