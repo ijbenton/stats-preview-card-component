@@ -19,12 +19,20 @@ body {
 }
 
 .card {
+  border-radius: 10px;
   background-color: #1b1938;
   color: white;
   width: 70%;
   height: 450px;
   display: flex;
   flex-direction: row-reverse;
+}
+@media (max-width: 1250px) {
+  .card {
+    flex-direction: column;
+    width: 90%;
+    height: 650px;
+  }
 }
 .card__info {
   display: flex;
@@ -33,10 +41,26 @@ body {
   justify-content: center;
   padding: 3.5rem;
 }
+@media (max-width: 1250px) {
+  .card__info {
+    padding: 2rem;
+    height: 75%;
+    flex: 0 1 100%;
+  }
+}
 .card__img {
-  background: url("/../../images/image-header-desktop.jpg") no-repeat center center;
+  background-image: url("../images/image-header-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100%;
   flex: 0 1 50%;
+  border-radius: 10px;
+}
+@media (max-width: 1250px) {
+  .card__img {
+    height: 25%;
+    flex: 0 1 100%;
+  }
 }
 .card__img--overlay {
   height: 100%;
@@ -49,27 +73,69 @@ body {
   font-size: 2rem;
   font-weight: 700;
 }
+@media (max-width: 1250px) {
+  .card__title {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}
 .card__description {
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.5rem;
   margin-bottom: 4rem;
 }
+@media (max-width: 1250px) {
+  .card__description {
+    font-size: 0.7rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+}
 .card__stats {
   font-family: "Lexend Deca";
   display: flex;
+}
+@media (max-width: 1250px) {
+  .card__stats {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .card__stats--item {
   display: flex;
   flex-direction: column;
   margin-right: 3rem;
 }
+@media (max-width: 1250px) {
+  .card__stats--item {
+    margin: 0 0 1rem 0;
+  }
+  .card__stats--item:last-child {
+    margin-bottom: 0;
+  }
+}
 .card__stats--item span:first-child {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 0.25rem;
+  color: white;
+}
+@media (max-width: 1250px) {
+  .card__stats--item span:first-child {
+    font-size: 1.2rem;
+    text-align: center;
+  }
 }
 .card__stats--item span:nth-child(2) {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.6);
+}
+@media (max-width: 1250px) {
+  .card__stats--item span:nth-child(2) {
+    font-size: 0.6rem;
+    text-align: center;
+  }
 }
 
 .highlight {

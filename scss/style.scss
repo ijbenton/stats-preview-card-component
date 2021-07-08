@@ -18,6 +18,7 @@ body {
 }
 
 .card {
+  border-radius: 10px;
   background-color: $primary;
   color: $white;
   width: 70%;
@@ -25,19 +26,38 @@ body {
   display: flex;
   flex-direction: row-reverse;
 
+  @media (max-width: $breakpoint-sm) {
+    flex-direction: column;
+    width: 90%;
+    height: 650px;
+  }
+
   &__info {
     display: flex;
     flex: 0 1 50%;
     flex-direction: column;
     justify-content: center;
     padding: 3.5rem;
+
+    @media (max-width: $breakpoint-sm) {
+      padding: 2rem;
+      height: 75%;
+      flex: 0 1 100%;
+    }
   }
 
   &__img {
-    background: url('/../../images/image-header-desktop.jpg') no-repeat center
-      center;
+    background-image: url('../images/image-header-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100%;
     flex: 0 1 50%;
+    border-radius: 10px;
+
+    @media (max-width: $breakpoint-sm) {
+      height: 25%;
+      flex: 0 1 100%;
+    }
 
     &--overlay {
       height: 100%;
@@ -51,28 +71,65 @@ body {
     margin: 0 0 1rem 0;
     font-size: 2rem;
     font-weight: 700;
+
+    @media (max-width: $breakpoint-sm) {
+      font-size: 1.4rem;
+      text-align: center;
+    }
   }
   &__description {
     color: $offwhite-primary;
     line-height: 1.5rem;
     margin-bottom: 4rem;
+
+    @media (max-width: $breakpoint-sm) {
+      font-size: 0.7rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
   }
   &__stats {
     font-family: 'Lexend Deca';
     display: flex;
+
+    @media (max-width: $breakpoint-sm) {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+
     &--item {
       display: flex;
       flex-direction: column;
       margin-right: 3rem;
 
+      @media (max-width: $breakpoint-sm) {
+        margin: 0 0 1rem 0;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
       span {
         &:first-child {
-          font-size: 1.5rem;
+          font-size: 1.25rem;
           margin-bottom: 0.25rem;
+          color: $white;
+
+          @media (max-width: $breakpoint-sm) {
+            font-size: 1.2rem;
+            text-align: center;
+          }
         }
         &:nth-child(2) {
           text-transform: uppercase;
           color: $offwhite-secondary;
+          @media (max-width: $breakpoint-sm) {
+            font-size: 0.6rem;
+            text-align: center;
+          }
         }
       }
     }
