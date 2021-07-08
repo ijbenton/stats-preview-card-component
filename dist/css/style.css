@@ -54,7 +54,7 @@ body {
   background-size: cover;
   height: 100%;
   flex: 0 1 50%;
-  border-radius: 10px;
+  border-radius: 0 10px 10px 0;
 }
 @media (max-width: 1250px) {
   .card__img {
@@ -67,6 +67,7 @@ body {
   background: rgba(170, 92, 219, 0.4);
   overflow: hidden;
   z-index: 2;
+  border-radius: 0 10px 10px 0;
 }
 .card__title {
   margin: 0 0 1rem 0;
