@@ -10,8 +10,12 @@ html {
 }
 body {
   height: 100%;
-  background-color: $background;
   font-size: 15px;
+}
+
+main {
+  height: 100%;
+  background-color: $background;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -11,8 +11,12 @@ html {
 
 body {
   height: 100%;
-  background-color: #090b1a;
   font-size: 15px;
+}
+
+main {
+  height: 100%;
+  background-color: #090b1a;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,7 +68,7 @@ body {
 }
 .card__img--overlay {
   height: 100%;
-  background: rgba(170, 92, 219, 0.4);
+  background: rgba(170, 92, 219, 0.7);
   overflow: hidden;
   z-index: 2;
   border-radius: 0 10px 10px 0;
